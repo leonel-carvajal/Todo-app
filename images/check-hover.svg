@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#57ddff"/>
+      <stop offset="1" stop-color="#c058f3"/>
+      <stop offset="1" stop-color="gray"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_1" data-name="Grupo 1" transform="translate(-595 -402)">
+    <g id="check-hover">
+      <g id="Elipse_1" data-name="Elipse 1" transform="translate(595 402)" stroke="#707070" stroke-width="1" fill="url(#linear-gradient)">
+        <circle cx="15" cy="15" r="15" stroke="none"/>
+        <circle cx="15" cy="15" r="14.5" fill="none"/>
+      </g>
+    </g>
+    <path id="check-solid" d="M5.095,79.8.22,73.266a1.261,1.261,0,0,1,0-1.422l1.061-1.422a.625.625,0,0,1,1.061,0l3.284,4.4L7.7,72.038l4.955-6.645a.625.625,0,0,1,1.061,0l1.061,1.422a1.261,1.261,0,0,1,0,1.422L6.156,79.8a.625.625,0,0,1-1.061,0Z" transform="translate(603 344.902)" fill="#fff"/>
+  </g>
+</svg>

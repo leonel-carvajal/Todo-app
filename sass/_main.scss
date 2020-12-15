@@ -44,6 +44,8 @@
   }
 }
 .todo-task{
+  height: 100vh;
+  background-color: $very-grayish;
   margin-top: -100px;
   &__box{
     @include laptop{
@@ -52,10 +54,12 @@
       margin-right: auto;
     }
     height: 50px;
-    background-color: $very-dark-des;
+    border-bottom: 1px solid $light-grayihs;
+    background-color: $very-gray;
+    color: $very-dark-grayish;
     font-size: 1.2rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     & img{
       display: block;
@@ -64,5 +68,16 @@
   &__option{
     margin-top: 10px;
     text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
   }
+  & p{
+    cursor: pointer;
+    margin-left: 20px;
+  }
+}
+.far{
+  cursor: pointer;
+  font-size: 1.5rem;
 }

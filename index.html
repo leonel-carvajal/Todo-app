@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="dist/css/style.css">  
   <title>Frontend Mentor | Todo app</title>
+      <script src="https://kit.fontawesome.com/9dd8b341bf.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <main>
@@ -14,25 +15,23 @@
     <div class="todo__item">
       <h1 class="todo__title">TODO</h1>
       <span class="todo__icon"><img src="/images/icon-moon.svg" alt="icon-moon"></span>
-      <form action="#" class="todo__form">
-        <input type="text" name="todo" class="todo__input" placeholder="creat a new todo">
-      </form>
+     
+        <input type="text" name="todo" class="todo__input" placeholder="creat a new todo" id="input">
+    
     </div>
   </section>
   <section class="todo-task">
-    <div class="todo-task__box">
-      <img src="/images/icon-check.svg" width="25px" alt="icon-cross">
-      <p class="todo-task__item">Make a web site</p>
-      <img src="/images/icon-cross.svg" width="25px" alt="icon-check">
+   <div id="task">
+
+   </div>
+    <div class="todo-task__option">
+      <p id="count">item left: 0</p>
+      <p id="clear">Clear Complete</p>
     </div>
     <div class="todo-task__option">
-      <span >item left:</span>
-      <span>Clear Complete</span>
-    </div>
-    <div class="todo-task__option">
-      <span>All</span>
-      <span>Active</span>
-      <span>Complete</span>
+      <p>All</p>
+      <p>Active</p>
+      <p>Complete</p>
     </div>
   </section>
 </main>
@@ -40,5 +39,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </footer> -->
+  <script src="js/script.js"></script>
 </body>
 </html>
