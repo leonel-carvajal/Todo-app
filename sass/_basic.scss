@@ -1,0 +1,40 @@
+:root{
+--Bright-Blue: hsl(220, 98%, 61%);
+--Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+//light theme
+--Very-Light-Gray: hsl(0, 0%, 98%);
+--Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+--Light-Grayish-Blue: hsl(233, 11%, 84%);
+--Dark-Grayish-Blue: hsl(236, 9%, 61%);
+--Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+//dark theme
+--Very-Dark-Blue: hsl(235, 21%, 11%);
+--Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+--Light-Grayish-Blue: hsl(234, 39%, 85%);
+--Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+--Dark-Grayish-Blue: hsl(234, 11%, 52%);
+--Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+--Very-Dark-Grayish-Blue-2: hsl(237, 14%, 26%);
+}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+$font-name: 'Josefin Sans';
+$Blue:var(--Bright-Blue);
+$gradient:var(--Check-Background);
+$very-gray:var(--Very-Light-Gray);
+$very-grayish:var(--Very-Light-Grayish-Blue);
+$light-grayihs:var(--Light-Grayish-Blue);
+$dark-grayish:var(--Dark-Grayish-Blue);
+$very-dark-grayish:var(--Very-Dark-Grayish-Blue);
+//------------------
+$very-dark:var(--Very-Dark-Blue);
+$very-dark-des:var(--Very-Dark-Desaturated-Blue);
+$light-blue:var(--Light-Grayish-Blue);
+$ligh-blue_hover:var(--Light-Grayish-Blue-hover);
+$dark-blue:var(--Dark-Grayish-Blue);
+$very-dark-blue:var(--Very-Dark-Grayish-Blue);
+$very-dark-blue2:var(--Very-Dark-Grayish-Blue-2);
+
+body{
+  font-size: 18px;
+  font-family: $font-name,sans-serif;
+}
