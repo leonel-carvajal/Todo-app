@@ -44,9 +44,9 @@
   }
 }
 .todo-task{
-  height: 100vh;
-  background-color: $very-grayish;
-  margin-top: -100px;
+  // height: 100vh;
+  // background-color: $very-grayish;
+
   &__box{
     @include laptop{
       width: 50%;
@@ -61,8 +61,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: opacity 0.8s;
     & img{
       display: block;
+      cursor: pointer;
     }
   }
   &__option{
@@ -80,4 +82,18 @@
 .far{
   cursor: pointer;
   font-size: 1.5rem;
+}
+.underlin{
+  text-decoration: line-through;
+}
+.fade{
+  transition: opacity;
+  visibility: hidden;
+  opacity: 0;
+}
+.all,.active,.complete{
+  color: $Blue;
+  &:hover{
+   color:  $very-dark-grayish;
+  }
 }
