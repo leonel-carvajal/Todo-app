@@ -14,11 +14,11 @@ const agregar = (e) => {
   if (e.key === 'Enter' && str != '' && str.length > 3) {
     const div = document.createElement('div')
     const p = document.createElement('p')
-    const imgOne = document.createElement('img')
+    const imgOne = document.createElement('div')
     const imgTwo = document.createElement('img')
     div.classList.add('todo-task__box')
-    imgOne.src = '/images/circle.svg'
-    imgOne.alt = 'circle'
+    //imgOne.src = '/images/circle.svg'
+    //imgOne.alt = 'circle'
     imgOne.classList.add('circle')
     imgOne.setAttribute('data-img', 'circle')
     imgTwo.src = '/images/icon-cross.svg'
@@ -46,24 +46,28 @@ const agregar = (e) => {
       }
       pCount.textContent = `Item left : ${count}`
     })
-    funImg(imgOne, p)
+    imgOne.addEventListener('click', funImg(imgOne, p))
   }
   containerTask.prepend(fragment)
 }
 
 const funImg = (img1, p) => {
-  let check = 'check-hover'
-  img1.addEventListener('click', (e) => {
-    if (e.target.dataset = `circle`) {
+  img1.addEventListener('click', () => {
+    if (img1.dataset.img === 'circle' && !img1.classList.contains('done')) {
+      img1.classList.add('done')
+      img1.dataset.img = 'hover'
+      p.classList.add('underlin')
       count--
-      e.target.src = `images/${check}.svg`
-      e.target.setAttribute('data-img', 'hover')
+    } else if (img1.dataset.img === 'hover' && img1.classList.contains('done')) {
+      img1.classList.remove('done')
+      img1.dataset.img = 'circle'
+      p.classList.remove('underlin')
+      count++
     }
     if (count < 0) {
       count = 0
     }
     pCount.textContent = `Item left : ${count}`
-    p.classList.add('underlin')
   })
 }
 
@@ -118,5 +122,9 @@ dark.addEventListener('click', () => {
   let arr2 = document.querySelectorAll('.todo-task__option')
   arr2.forEach(item => {
     item.classList.toggle('dark')
+  })
+  let arr3 = document.querySelectorAll('.circle')
+  arr3.forEach(item => {
+    item.classList.toggle('dark-c')
   })
 })

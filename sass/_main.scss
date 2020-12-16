@@ -1,13 +1,15 @@
-.todo{
+.todo {
   position: relative;
   margin-top: -25px;
   height: 400px;
   background-image: url('/images/bg-desktop-light.jpg');
   background-repeat: no-repeat;
-  &__title{
-    @include laptop{
+
+  &__title {
+    @include laptop {
       left: 25%;
     }
+
     color: $very-gray;
     text-align: center;
     position: absolute;
@@ -15,23 +17,28 @@
     left: 10px;
     letter-spacing: 10px;
   }
-  &__icon{
-    @include laptop{
+
+  &__icon {
+    @include laptop {
       left: 70%;
     }
+
     position: absolute;
     top: 125px;
     left: 300px;
     cursor: pointer;
   }
-  &__form{
+
+  &__form {
     width: 100%;
   }
-  &__input{
-    @include laptop{
+
+  &__input {
+    @include laptop {
       width: 50%;
       left: 25%;
     }
+
     border: none;
     outline: none;
     height: 40px;
@@ -43,18 +50,20 @@
     padding: 1.2rem;
   }
 }
-.todo-task{
+
+.todo-task {
   background-color: $very-gray;
   color: $very-dark-grayish;
   // height: 100vh;
   // background-color: $very-grayish;
 
-  &__box{
-    @include laptop{
+  &__box {
+    @include laptop {
       width: 50%;
       margin-left: auto;
       margin-right: auto;
     }
+
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -67,38 +76,72 @@
     justify-content: space-between;
     align-items: center;
     transition: opacity 0.8s;
-    & img{
+
+    & img {
       display: block;
       cursor: pointer;
     }
   }
-  &__option{
+
+  &__option {
     // margin-top: 10px;
     text-align: center;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
   }
-  & p{
+
+  & p {
     cursor: pointer;
     margin-left: 20px;
   }
 }
-.far{
+
+.far {
   cursor: pointer;
   font-size: 1.5rem;
 }
-.underlin{
+
+.underlin {
   text-decoration: line-through;
 }
-.fade{
+
+.fade {
   transition: opacity;
   visibility: hidden;
   opacity: 0;
 }
-.all,.active,.complete{
+
+.all,
+.active,
+.complete {
   color: $Blue;
-  &:hover{
-   color:  $very-dark-grayish;
+
+  &:hover {
+    color: $very-dark-grayish;
   }
+}
+
+.circle {
+  width: 35px;
+  height: 35px;
+  border: 1px solid $very-dark;
+  border-radius: 50%;
+  position: relative;
+}
+.done{
+  background:linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.done::before{
+  content: '';
+  position: absolute;
+  border-color: $very-gray;
+  border-style: solid;
+  border-width: 0 0.3em 0.25em 0;
+  height: 1em;
+  top: 1.25em;
+  left: 0.7em;
+  margin-top: -1em;
+  transform: rotate(45deg);
+  width: 0.5em;
 }
