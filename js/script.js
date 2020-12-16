@@ -6,6 +6,7 @@ const all = document.getElementById('all')
 const complete = document.getElementById('complete')
 const active = document.getElementById('active')
 const dark = document.getElementById('dark')
+const todo = document.getElementById('todo')
 let count = 0
 
 const agregar = (e) => {
@@ -115,6 +116,7 @@ dark.addEventListener('click', () => {
   document.body.classList.toggle('body-dark')
   input.classList.toggle('dark-input')
   containerTask.classList.toggle('dark')
+  todo.classList.toggle('todo-d')
   let arr = document.querySelectorAll('.todo-task__box')
   arr.forEach(item => {
     item.classList.toggle('dark')
