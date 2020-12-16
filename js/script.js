@@ -125,6 +125,6 @@ dark.addEventListener('click', () => {
   })
   let arr3 = document.querySelectorAll('.circle')
   arr3.forEach(item => {
-    item.classList.toggle('dark-c')
+      item.classList.toggle('dark-c')
   })
 })
