@@ -44,6 +44,8 @@
   }
 }
 .todo-task{
+  background-color: $very-gray;
+  color: $very-dark-grayish;
   // height: 100vh;
   // background-color: $very-grayish;
 
@@ -53,10 +55,13 @@
       margin-left: auto;
       margin-right: auto;
     }
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     height: 50px;
     border-bottom: 1px solid $light-grayihs;
-    background-color: $very-gray;
-    color: $very-dark-grayish;
+    background-color: inherit;
+    color: inherit;
     font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
@@ -68,7 +73,7 @@
     }
   }
   &__option{
-    margin-top: 10px;
+    // margin-top: 10px;
     text-align: center;
     display: flex;
     justify-content:center;

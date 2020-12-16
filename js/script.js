@@ -5,7 +5,9 @@ const pClear = document.getElementById('clear')
 const all = document.getElementById('all')
 const complete = document.getElementById('complete')
 const active = document.getElementById('active')
+const dark = document.getElementById('dark')
 let count = 0
+
 const agregar = (e) => {
   let str = input.value
   const fragment = document.createDocumentFragment()
@@ -52,7 +54,6 @@ const agregar = (e) => {
 const funImg = (img1, p) => {
   let check = 'check-hover'
   img1.addEventListener('click', (e) => {
-
     if (e.target.dataset = `circle`) {
       count--
       e.target.src = `images/${check}.svg`
@@ -81,7 +82,7 @@ const task = (dato = '') => {
       item.classList.add('fade')
     } else if (item.children[0].dataset.img !== dato && item.classList.contains('fade')) {
       item.classList.remove('fade')
-    } 
+    }
   })
 }
 all.addEventListener('click', () => {
@@ -98,3 +99,24 @@ complete.addEventListener('click', () => {
 })
 input.addEventListener('keyup', agregar)
 pClear.addEventListener('click', clearComplete)
+
+dark.addEventListener('click', () => {
+  let moon = 'far fa-sun'
+  let sun = 'fas fa-moon'
+  if (dark.children[0].className === moon) {
+    dark.children[0].className = sun
+  } else {
+    dark.children[0].className = moon
+  }
+  document.body.classList.toggle('body-dark')
+  input.classList.toggle('dark-input')
+  containerTask.classList.toggle('dark')
+  let arr = document.querySelectorAll('.todo-task__box')
+  arr.forEach(item => {
+    item.classList.toggle('dark')
+  })
+  let arr2 = document.querySelectorAll('.todo-task__option')
+  arr2.forEach(item => {
+    item.classList.toggle('dark')
+  })
+})
