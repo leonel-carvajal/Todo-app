@@ -7,9 +7,11 @@ const complete = document.getElementById('complete')
 const active = document.getElementById('active')
 const dark = document.getElementById('dark')
 const todo = document.getElementById('todo')
+let idCount = 0
 let count = 0
 
 const agregar = (e) => {
+  let id = `task-${count}`
   let str = input.value
   const fragment = document.createDocumentFragment()
   if (e.key === 'Enter' && str != '' && str.length > 3) {
@@ -18,14 +20,13 @@ const agregar = (e) => {
     const imgOne = document.createElement('div')
     const imgTwo = document.createElement('img')
     div.classList.add('todo-task__box')
-    //imgOne.src = '/images/circle.svg'
-    //imgOne.alt = 'circle'
+    div.setAttribute('draggable', 'true')
+    div.setAttribute('id',id)
     imgOne.classList.add('circle')
     imgOne.setAttribute('data-img', 'circle')
     imgTwo.src = '/images/icon-cross.svg'
     imgTwo.alt = 'cross'
     imgTwo.style.width = '25px'
-    //imgTwo.setAttribute('dataset', 'data-img=""')
     imgTwo.classList.add('img')
     p.textContent = input.value
     div.appendChild(imgOne)
@@ -130,3 +131,23 @@ dark.addEventListener('click', () => {
       item.classList.toggle('dark-c')
   })
 })
+const Drag = () => {
+  containerTask.addEventListener('dragstart', (e) => {
+    e.dataTransfer.setData('text/plain', e.target.id)
+  })
+  containerTask.addEventListener('drag', (e) => {
+    e.target.classList.add('drag')
+  })
+  containerTask.addEventListener('dragend', (e) => {
+    e.target.classList.remove('drag')
+  })
+  containerTask.addEventListener('dragover', (e) => {
+    e.preventDefault()
+  })
+  containerTask.addEventListener('drop', (e) => {
+    e.preventDefault()
+    const element = document.getElementById(e.dataTransfer.getData('text'))
+    containerTask.append(containerTask.removeChild(element))
+  })
+}
+window.addEventListener('DOMContentLoaded',Drag)

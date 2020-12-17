@@ -55,7 +55,7 @@ body{
 }
 
 .todo-task {
-  background-color: $very-gray;
+  background-color: #fff;
   color: $very-dark-grayish;
   // height: 100vh;
   // background-color: $very-grayish;
@@ -88,6 +88,7 @@ body{
 
   &__option {
     // margin-top: 10px;
+    background-color: #fff;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -156,4 +157,8 @@ body{
   & a{
     color: royalblue;
   }
+}
+.drag{
+  background-color: royalblue;
+  color: $light-blue;
 }
