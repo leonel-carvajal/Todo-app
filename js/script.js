@@ -7,6 +7,7 @@ const complete = document.getElementById('complete')
 const active = document.getElementById('active')
 const dark = document.getElementById('dark')
 const todo = document.getElementById('todo')
+const sectionTask = document.getElementById('SectionTask')
 let idCount = 0
 let count = 0
 
@@ -50,7 +51,7 @@ const agregar = (e) => {
     })
     imgOne.addEventListener('click', funImg(imgOne, p))
   }
-  containerTask.prepend(fragment)
+  containerTask.appendChild(fragment)
 }
 
 const funImg = (img1, p) => {
@@ -107,6 +108,7 @@ input.addEventListener('keyup', agregar)
 pClear.addEventListener('click', clearComplete)
 
 dark.addEventListener('click', () => {
+  let children = containerTask.children
   let moon = 'far fa-sun'
   let sun = 'fas fa-moon'
   if (dark.children[0].className === moon) {
@@ -117,18 +119,17 @@ dark.addEventListener('click', () => {
   document.body.classList.toggle('body-dark')
   input.classList.toggle('dark-input')
   containerTask.classList.toggle('dark')
+  sectionTask.classList.toggle('dark')
   todo.classList.toggle('todo-d')
   let arr = document.querySelectorAll('.todo-task__box')
   arr.forEach(item => {
-    item.classList.toggle('dark')
+    if (children.length ===0 && dark.children[0].className === sun) {
+      item.classList.remove('dark-b')
+    } 
   })
   let arr2 = document.querySelectorAll('.todo-task__option')
   arr2.forEach(item => {
     item.classList.toggle('dark')
-  })
-  let arr3 = document.querySelectorAll('.circle')
-  arr3.forEach(item => {
-      item.classList.toggle('dark-c')
   })
 })
 const Drag = () => {

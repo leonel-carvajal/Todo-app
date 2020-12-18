@@ -1,6 +1,7 @@
-body{
+body {
   padding-bottom: 6rem;
 }
+
 .todo {
   position: relative;
   margin-top: -25px;
@@ -57,8 +58,6 @@ body{
 .todo-task {
   background-color: #fff;
   color: $very-dark-grayish;
-  // height: 100vh;
-  // background-color: $very-grayish;
 
   &__box {
     @include laptop {
@@ -129,14 +128,16 @@ body{
 .circle {
   width: 35px;
   height: 35px;
-  border: 1px solid $very-dark;
+  border: 1px solid $dark-grayish;
   border-radius: 50%;
   position: relative;
 }
-.done{
-  background:linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+.done {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
-.done::before{
+
+.done::before {
   content: '';
   position: absolute;
   border-color: $very-gray;
@@ -149,16 +150,19 @@ body{
   transform: rotate(45deg);
   width: 0.5em;
 }
-.attribution{
+
+.attribution {
   text-align: left;
   width: 100%;
   position: fixed;
   bottom: 0;
-  & a{
+
+  & a {
     color: royalblue;
   }
 }
-.drag{
+
+.drag {
   background-color: royalblue;
   color: $light-blue;
 }
